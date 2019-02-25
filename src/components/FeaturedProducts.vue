@@ -127,7 +127,7 @@
   &__category {
     display: inline;
     margin-right: 60px;
-    font-size: 1rem;
+    font-size: 1em;
 
     a {
       color: #727272;
