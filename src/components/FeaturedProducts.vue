@@ -133,6 +133,11 @@
       color: #727272;
       text-decoration: none;
       text-transform: uppercase;
+      transition: 0.1s;
+
+      &:hover {
+        color: #00c8c8;
+      }
     }
 
     &--active a {
@@ -155,6 +160,7 @@
   background-color: salmon;
   transition: 0.2s;
   position: relative;
+  cursor: pointer;
 
   &:nth-child(3) {
     grid-column: 3 / span 2;
