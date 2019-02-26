@@ -1,21 +1,23 @@
 <template>
   <div id="app">
-    <navigation />
+    <navigation/>
     <router-view/>
+    <site-footer/>
   </div>
 </template>
 
 <script>
-import Navigation from '@/components/Navigation.vue'
+  import Navigation from '@/components/Navigation.vue'
+  import SiteFooter from '@/components/SiteFooter.vue'
 
-export default {
-  name: 'app',
-  components: {
-    Navigation
+  export default {
+    name: 'app',
+    components: {
+      Navigation,
+      SiteFooter
+    }
   }
-}
 </script>
-
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700|Roboto');
