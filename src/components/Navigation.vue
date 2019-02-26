@@ -1,22 +1,47 @@
 <template>
-    <div class="nav-bar" id="nav-bar">
-        <div class="site-container">
-            <div class="nav-content">
-                <p class="nav-content__branding">
-                    <router-link to="/">AVENUE <span class="nav-content__branding--light">FASHION</span></router-link>
-                </p>
+    <div>
+        <div class="top-bar">
+            <div class="site-container">
+                <div class="bar-content">
+                    <div class="bar-content__currency">
+                        <a href="#">
+                            Currency: GBP
+                            <i class="fal fa-angle-down"></i>
+                        </a>
+                    </div>
+                    <nav class="bar-content__account">
+                        <a href="#">Register</a>
+                        <a href="#">Signup</a>
+                    </nav>
+                    <div class="bar-content__cart">
+                        <a href="#">
+                            <i class="fas fa-shopping-cart"></i>
+                            empty
+                            <i class="fal fa-angle-down"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-bar" id="nav-bar">
+            <div class="site-container">
+                <div class="nav-content">
+                    <p class="nav-content__branding">
+                        <router-link to="/">AVENUE <span class="nav-content__branding--light">FASHION</span></router-link>
+                    </p>
 
-                <nav class="nav-content__links">
-                    <router-link to="/">Mens</router-link>
-                    <router-link to="/about">Womens</router-link>
-                    <router-link to="/about">The Brand</router-link>
-                    <router-link to="/about">Local Stores</router-link>
-                    <router-link to="/about">Look Book</router-link>
-                </nav>
+                    <nav class="nav-content__links">
+                        <router-link to="/">Mens</router-link>
+                        <router-link to="/about">Womens</router-link>
+                        <router-link to="/about">The Brand</router-link>
+                        <router-link to="/about">Local Stores</router-link>
+                        <router-link to="/about">Look Book</router-link>
+                    </nav>
 
-                <div class="nav-content__search">
-                    <input type="search" name="search" id="search" placeholder="Search..">
-                    <i class="fas fa-search"></i>
+                    <div class="nav-content__search">
+                        <input type="search" name="search" id="search" placeholder="Search..">
+                        <i class="fas fa-search"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -39,8 +64,79 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
 
 
 <style lang="scss">
+    .top-bar {
+        position: fixed;
+        height: 45px;
+        width: 100%;
+        background-color: #333333;
+        z-index: 100;
+    }
+
+    .bar-content {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 305px;
+        color: #929292;
+        line-height: 45px;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        &__currency {
+            flex-grow: 2;
+
+            a {
+                transition: 0.1s;
+
+                &:hover {
+                    color: lighten($color: #929292, $amount: 20);
+                }
+            }
+
+            .fa-angle-down {
+                margin-left: 9px;
+            }
+        }
+
+        &__account {
+            margin-right: 85px;
+
+            a {
+                margin-right: 35px;
+                transition: 0.1s;
+
+                &:hover {
+                    color: lighten($color: #929292, $amount: 20);
+                }
+            }
+        }
+
+        &__cart {
+            background-color: #00c8c8;
+            color: #fff;
+            padding: 0 23px;
+            transition: 0.1s;
+            cursor: pointer;
+
+            &:hover {
+                background-color: darken($color: #00c8c8, $amount: 5);
+            }
+
+            .fa-shopping-cart {
+                margin-right: 23px;
+            }
+
+            .fa-angle-down {
+                margin-left: 9px;
+            }
+        }
+    }
+
     .nav-bar {
         position: fixed;
+        top: 45px;
         z-index: 100;
         width: 100%;
         padding: 20px 0;
