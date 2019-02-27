@@ -31,4 +31,9 @@
     max-width: 1700px;
     margin: auto;
   }
+
+  .content-container {
+    max-width: 1170px;
+    margin: auto;
+  }
 </style>
