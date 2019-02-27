@@ -27,15 +27,133 @@
             <div class="site-container">
                 <div class="nav-content">
                     <p class="nav-content__branding">
-                        <router-link to="/">AVENUE <span class="nav-content__branding--light">FASHION</span></router-link>
+                        <router-link class="logo" to="/">AVENUE <span class="nav-content__branding--light">FASHION</span></router-link>
                     </p>
 
                     <nav class="nav-content__links">
-                        <router-link to="/">Mens</router-link>
-                        <router-link to="/about">Womens</router-link>
-                        <router-link to="/about">The Brand</router-link>
-                        <router-link to="/about">Local Stores</router-link>
-                        <router-link to="/about">Look Book</router-link>
+                        <div class="nav-content__item nav-content__item--has-sub">
+                            <router-link class="nav-content__link" to="/">Mens</router-link>
+
+                            <div class="sub-menu">
+                                <div class="sub-menu__wrapper">
+
+                                    <div class="sub-menu__section">
+                                        <p class="sub-menu__title">Casuals</p>
+                                        <ul class="sub-menu__links">
+                                            <li class="sub-menu__single">
+                                                <a href="#">Jackets</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Hoodies &amp; Sweatshirts</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Polo Shirts</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Sportswear</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Trousers &amp; Chinos</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">T-Shirts</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="sub-menu__section">
+                                        <p class="sub-menu__title">Formal</p>
+                                        <ul class="sub-menu__links">
+                                            <li class="sub-menu__single">
+                                                <a href="#">Jackets</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Shirts</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Suits</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Trousers</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                                <p class="sub-menu__statement">
+                                    Autumn sale!<span class="sub-menu__statement--light">Up to 50% off</span>
+                                </p>
+
+                            </div>
+
+                        </div>
+                        <div class="nav-content__item nav-content__item--has-sub">
+                            <router-link class="nav-content__link" to="/about">Womens</router-link>
+
+                            <div class="sub-menu">
+                                <div class="sub-menu__wrapper">
+
+                                    <div class="sub-menu__section">
+                                        <p class="sub-menu__title">Casuals</p>
+                                        <ul class="sub-menu__links">
+                                            <li class="sub-menu__single">
+                                                <a href="#">Tops</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Skirts</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Jumpers &amp; cardigans</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Multipacks</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Jeans</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">T-Shirts</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="sub-menu__section">
+                                        <p class="sub-menu__title">Formal</p>
+                                        <ul class="sub-menu__links">
+                                            <li class="sub-menu__single">
+                                                <a href="#">Coats</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Shirts</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Dresses</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Shoes</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                                <p class="sub-menu__statement">
+                                    Clothing crisis?<span class="sub-menu__statement--light">See our multipacks</span>
+                                </p>
+
+                            </div>
+
+                        </div>
+                        <div class="nav-content__item">
+                            <router-link class="nav-content__link" to="/brand">The Brand</router-link>
+                        </div>
+                        <div class="nav-content__item nav-content__item--has-sub">
+                            <router-link class="nav-content__link" to="/about">Local Stores</router-link>
+                        </div>
+                        <div class="nav-content__item nav-content__item--has-sub">
+                            <router-link class="nav-content__link" to="/about">Look Book</router-link>
+                        </div>
                     </nav>
 
                     <div class="nav-content__search">
@@ -168,13 +286,55 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
         }
 
         &__links {
-            a {
-                color: #222222;
-                text-decoration: none;
-                text-transform: uppercase;
-                margin-right: 60px;
-                font-size: 1em;
-                line-height: 30px;
+            display: flex;
+        }
+
+        &__link {
+            color: #222222;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin-right: 60px;
+            font-size: 1em;
+            line-height: 30px;
+            transition: 0.1s;
+
+            &:hover {
+                color: #00c8c8;
+            }
+        }
+
+        .router-link-exact-active:not(.logo) {
+            color: #00c8c8;
+        }
+
+        &__item {
+            padding-bottom: 20px;
+
+            &--has-sub {
+                position: relative;
+
+                .nav-content__link {
+                    position: relative;
+
+                    &::after {
+                        position: absolute;
+                        top: 12px;
+                        left: -5px;
+                        font-family: "Font Awesome 5 Pro";
+                        font-weight: 300;
+                        content: "\f107";
+                    }
+                }
+
+                &:hover {
+                    .sub-menu {
+                        display: block;
+                    }
+
+                    .nav-content__link {
+                        color: #00c8c8;
+                    }
+                }
             }
         }
 
@@ -198,6 +358,64 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
                 &:hover {
                     color: #00c8c8;
                 }
+            }
+        }
+    }
+
+    .sub-menu {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: -5px;
+        min-width: 300px;
+        background-color: #f8f8f8;
+        box-shadow: 0px 11px 24px rgba(0,0,0,0.4);
+        z-index: 100;
+
+        &__wrapper {
+            display: flex;
+            padding: 30px;
+        }
+
+        &__title {
+            margin: 0 0 30px 0;
+            text-transform: uppercase;
+            color: #575153;
+        }
+
+        &__links {
+            list-style-type: none;
+            padding: 0;
+            min-width: 200px;
+        }
+
+        &__single {
+            color: #727272;
+            margin-top: 10px;
+            font-weight: 100;
+            font-size: 1.1em;
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+
+        &__statement {
+            margin: 0px 30px 30px 30px;
+            padding: 54px 15px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 2em;
+            font-weight: 700;
+            background-color: #333333;
+            color: #FFF;
+            letter-spacing: 2px;
+            line-height: 1.2em;
+
+            &--light {
+                display: block;
+                font-weight: 300;
             }
         }
     }
