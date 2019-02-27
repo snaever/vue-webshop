@@ -22,6 +22,7 @@ $hero-height: 920px;
 
     .hero {
         position: relative;
+        top: -70px;
         background-color: #f8f8f8;
         height: $hero-height;
         margin: 0 0 60px 0;
