@@ -1,7 +1,7 @@
 <template>
     <div>
        <footer class="site-footer">
-            <div class="site-container">
+            <div class="content-container">
                 <div class="footer-content">
                     <div class="footer-content__sitemap">
 
@@ -80,7 +80,7 @@
         </footer>
 
         <div class="copyright-bar">
-            <div class="site-container">
+            <div class="content-container">
                 <div class="copyright-content">
                     <p class="copyright-content__trademark">&copy; 2016 Avenue Fashion<span class="copyright-content__trademark--sup">TM</span></p>
                     <p class="copyright-content__credit">Design by RobbyDesigns.com</p>
@@ -94,10 +94,11 @@
 <style lang="scss">
     .site-footer {
         background-color: #f8f8f8;
+        margin-top: 110px;
     }
 
     .footer-content {
-        padding: 65px 305px;
+        padding: 65px 0;
 
         &__sitemap {
             display: flex;
@@ -124,6 +125,11 @@
             a {
                 color: inherit;
                 text-decoration: none;
+                transition: 0.1s;
+
+                &:hover {
+                    color: darken($color: #727272, $amount: 20);
+                }
             }
         }
 
@@ -178,6 +184,11 @@
 
             a {
                 color: inherit;
+                transition: 0.1s;
+
+                &:hover {
+                    opacity: 0.8;
+                }
             }
         }
     }
@@ -190,7 +201,6 @@
     .copyright-content {
         display: flex;
         justify-content: space-between;
-        padding: 0 305px;
         height: 100%;
         line-height: 45px;
 
