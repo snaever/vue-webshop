@@ -1,7 +1,8 @@
 <template>
     <div>
+        <div class="top-spacing"></div>
         <div class="top-bar">
-            <div class="site-container">
+            <div class="content-container">
                 <div class="bar-content">
                     <div class="bar-content__currency">
                         <a href="#">
@@ -10,8 +11,8 @@
                         </a>
                     </div>
                     <nav class="bar-content__account">
-                        <a href="#">Register</a>
-                        <a href="#">Signup</a>
+                        <router-link to="/login">Register</router-link>
+                        <router-link to="/login">Sign in</router-link>
                     </nav>
                     <div class="bar-content__cart">
                         <a href="#">
@@ -182,8 +183,13 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
 
 
 <style lang="scss">
+    .top-spacing {
+        padding-top: 115px;
+    }
+
     .top-bar {
         position: fixed;
+        top: 0;
         height: 45px;
         width: 100%;
         background-color: #333333;
@@ -193,7 +199,6 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
     .bar-content {
         display: flex;
         justify-content: space-between;
-        padding: 0 305px;
         color: #929292;
         line-height: 45px;
 
@@ -259,9 +264,10 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
         width: 100%;
         padding: 20px 0;
         transition: 0.2s;
+        height: 30px;
 
         &.scrolled {
-            background-color: #fff;
+            background-color: #f8f8f8;
         }
     }
 
