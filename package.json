@@ -8,6 +8,8 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "pretty-checkbox": "^3.0.3",
+    "vee-validate": "^2.1.7",
     "vue": "^2.6.6",
     "vue-router": "^3.0.1"
   },
