@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="fp">
     <div class="site-container">
       <ul class="featured-categories">
         <li class="featured-categories__category featured-categories__category--active"><a href="#">Popular</a></li>
@@ -10,113 +10,66 @@
       </ul>
 
       <div class="featured-products">
-        <div class="featured-item">
-          <div class="featured-item__price">
-            <span class="featured-item__currency">£</span>89.99
-          </div>
+          <div class="featured-item" v-for="(product, index) in product" :key="index">
 
-          <div class="featured-details">
-            <h3 class="featured-details__title">Womens burnt orange casual tee&nbsp;&nbsp;<span class="featured-item__currency">£</span>89.99</h3>
-            <p class="featured-details__description">Classic casual t-shirt for women on the move. 100% cotton.</p>
+            <router-link :to="'product/' + index">
+              <picture class="featured-item__image">
+                <source :src="require('@/assets/img/items/' + product.images[0])">
+                <img :src="require('@/assets/img/items/' + product.images[0])"/>
+              </picture>
+            </router-link>
 
-            <div class="details-cta">
-              <a href="#" class="details-cta__button"><i class="fas fa-shopping-cart"></i></a>
-              <a href="#" class="details-cta__button"><i class="fas fa-heart"></i></a>
-              <a href="#" class="details-cta__button"><i class="fas fa-compress-alt"></i></a>
+            <div class="featured-item__price">
+
+              <p v-if="product.sale.onSale">
+                <span class="featured-item__currency">£</span>
+                <span class="featured-item__price--regular">{{ product.sale.originalPrice }}</span>
+              </p>
+              <p>
+                <span class="featured-item__currency">£</span>{{ product.price }}
+              </p>
             </div>
-          </div>
-        </div>
 
-        <div class="featured-item">
-          <div class="featured-item__price">
-            <span class="featured-item__currency">£</span>89.99
-          </div>
+            <div class="featured-details">
+              <h3 class="featured-details__title"><router-link :to="'product/' + index">{{ product.name }}&nbsp;&nbsp;<span class="featured-item__currency">£</span>{{ product.price }}</router-link></h3>
+              <p class="featured-details__description">{{ product.intro.body.substring(0,40) + "..." }}</p>
 
-          <div class="featured-details">
-            <h3 class="featured-details__title">Womens burnt orange casual tee&nbsp;&nbsp;<span class="featured-item__currency">£</span>89.99</h3>
-            <p class="featured-details__description">Classic casual t-shirt for women on the move. 100% cotton.</p>
-
-            <div class="details-cta">
-              <a href="#" class="details-cta__button"><i class="fas fa-shopping-cart"></i></a>
-              <a href="#" class="details-cta__button"><i class="fas fa-heart"></i></a>
-              <a href="#" class="details-cta__button"><i class="fas fa-compress-alt"></i></a>
+              <div class="details-cta">
+                <router-link :to="'product/' + index" class="details-cta__button"><i class="fas fa-shopping-cart"></i></router-link>
+                <router-link :to="'product/' + index" class="details-cta__button"><i class="fas fa-heart"></i></router-link>
+                <router-link :to="'product/' + index" class="details-cta__button"><i class="fas fa-compress-alt"></i></router-link>
+              </div>
             </div>
+
           </div>
-        </div>
-
-        <div class="featured-item">
-          <div class="featured-item__price">
-            <span class="featured-item__currency">£</span>89.99
-          </div>
-
-          <div class="featured-details">
-            <h3 class="featured-details__title">Womens burnt orange casual tee&nbsp;&nbsp;<span class="featured-item__currency">£</span>89.99</h3>
-            <p class="featured-details__description">Classic casual t-shirt for women on the move. 100% cotton.</p>
-
-            <div class="details-cta">
-              <a href="#" class="details-cta__button"><i class="fas fa-shopping-cart"></i></a>
-              <a href="#" class="details-cta__button"><i class="fas fa-heart"></i></a>
-              <a href="#" class="details-cta__button"><i class="fas fa-compress-alt"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="featured-item">
-          <div class="featured-item__price">
-            <span class="featured-item__currency">£</span>89.99
-          </div>
-
-          <div class="featured-details">
-            <h3 class="featured-details__title">Womens burnt orange casual tee&nbsp;&nbsp;<span class="featured-item__currency">£</span>89.99</h3>
-            <p class="featured-details__description">Classic casual t-shirt for women on the move. 100% cotton.</p>
-
-            <div class="details-cta">
-              <a href="#" class="details-cta__button"><i class="fas fa-shopping-cart"></i></a>
-              <a href="#" class="details-cta__button"><i class="fas fa-heart"></i></a>
-              <a href="#" class="details-cta__button"><i class="fas fa-compress-alt"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="featured-item">
-          <div class="featured-item__price">
-            <span class="featured-item__currency">£</span>89.99
-          </div>
-
-          <div class="featured-details">
-            <h3 class="featured-details__title">Womens burnt orange casual tee&nbsp;&nbsp;<span class="featured-item__currency">£</span>89.99</h3>
-            <p class="featured-details__description">Classic casual t-shirt for women on the move. 100% cotton.</p>
-
-            <div class="details-cta">
-              <a href="#" class="details-cta__button"><i class="fas fa-shopping-cart"></i></a>
-              <a href="#" class="details-cta__button"><i class="fas fa-heart"></i></a>
-              <a href="#" class="details-cta__button"><i class="fas fa-compress-alt"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="featured-item">
-          <div class="featured-item__price">
-            <span class="featured-item__currency">£</span>89.99
-          </div>
-
-          <div class="featured-details">
-            <h3 class="featured-details__title">Womens burnt orange casual tee&nbsp;&nbsp;<span class="featured-item__currency">£</span>89.99</h3>
-            <p class="featured-details__description">Classic casual t-shirt for women on the move. 100% cotton.</p>
-
-            <div class="details-cta">
-              <a href="#" class="details-cta__button"><i class="fas fa-shopping-cart"></i></a>
-              <a href="#" class="details-cta__button"><i class="fas fa-heart"></i></a>
-              <a href="#" class="details-cta__button"><i class="fas fa-compress-alt"></i></a>
-            </div>
-          </div>
-        </div>
-
       </div>
 
     </div>
   </div>
 </template>
+
+<script>
+import axios from "axios";
+export default {
+  data () {
+    return {
+      product: {},
+    }
+  },
+  created() {
+    this.getData();
+  },
+  methods: {
+    getData() {
+      axios
+        .get("/data.json")
+        .then(response => (this.product = response.data))
+        .catch(err => console.log(err.message));
+    }
+  }
+}
+</script>
+
 
 <style lang="scss">
 .featured-categories {
@@ -157,10 +110,9 @@
 
 .featured-item {
   height: 500px;
-  background-color: salmon;
+  background-color: #f8f8f8;
   transition: 0.2s;
   position: relative;
-  cursor: pointer;
 
   &:nth-child(3) {
     grid-column: 3 / span 2;
@@ -185,10 +137,33 @@
     }
   }
 
+  &__image {
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
+
+    img {
+      width: 100%;
+    }
+  }
+
   &__price {
+    position: absolute;
+    display: flex;
     font-size: 1.5em;
     font-weight: 300;
     margin: 1em;
+
+    &--regular {
+      text-decoration: line-through;
+      margin-right: 20px;
+    }
+
+    p {
+      margin: 0;
+      text-shadow: 0px 0px 5px #f8f8f8;
+    }
   }
 
   &__currency {
@@ -216,6 +191,11 @@
     text-align: center;
     text-transform: uppercase;
     font-weight: 400;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
   }
 
   &__description {
