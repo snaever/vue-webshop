@@ -20,7 +20,7 @@
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Roboto');
 
   body {
     font-family: 'Montserrat', sans-serif;

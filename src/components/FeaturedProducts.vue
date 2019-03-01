@@ -187,7 +187,7 @@
 
   &__price {
     font-size: 1.5em;
-    font-weight: 100;
+    font-weight: 300;
     margin: 1em;
   }
 
@@ -215,7 +215,7 @@
     font-size: 1em;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   &__description {
@@ -224,7 +224,7 @@
     margin: 15px 0;
     font-size: 1em;
     text-align: center;
-    font-weight: 300;
+    font-weight: 400;
   }
 }
 

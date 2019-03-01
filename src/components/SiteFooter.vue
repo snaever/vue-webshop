@@ -170,7 +170,7 @@
 
             &--light {
                 display: block;
-                font-weight: 100;
+                font-weight: 300;
             }
         }
 

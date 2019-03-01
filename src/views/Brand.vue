@@ -66,7 +66,7 @@
   import PageTitle from '@/components/PageTitle.vue'
 
   export default {
-    name: 'app',
+    name: 'brand',
     components: {
       PageTitle
     }
@@ -136,7 +136,7 @@
 
     &__title {
       text-transform: uppercase;
-      font-weight: 400;
+      font-weight: 500;
       font-size: 1.4em;
       margin: 0;
       color: #575153;
@@ -144,7 +144,7 @@
 
     &__subtitle {
       text-transform: uppercase;
-      font-weight: 400;
+      font-weight: 500;
       color: #727272;
       margin: 12px 0;
     }

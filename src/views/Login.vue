@@ -12,15 +12,15 @@
                 <p class="forms__title">Sign in</p>
                 <form @submit.prevent="validateForm('signin')" novalidate data-vv-scope="signin">
 
-					<input class="forms__entry" :class="{'input': true, 'forms__entry--error': errors.has('signin.login_email') }" type="text" name="login_email" id="login_email" placeholder="Your email.." v-model.lazy="login_email" v-validate="'required|email'">
-					<span class="forms__error-msg" v-show="errors.has('signin.login_email')">{{ errors.first("signin.login_email") }}</span>
-					<input class="forms__entry" :class="{'input': true, 'forms__entry--error': errors.has('signin.login_password') }" type="password" name="login_password" id="login_password" placeholder="Your password.." v-model.lazy="login_password" v-validate="'required'">
-					<span class="forms__error-msg" v-show="errors.has('signin.login_password')">{{ errors.first("signin.login_password") }}</span>
+								<input class="forms__entry" :class="{'input': true, 'forms__entry--error': errors.has('signin.login_email') }" type="text" name="login_email" id="login_email" placeholder="Your email.." v-model.lazy="login_email" v-validate="'required|email'">
+								<span class="forms__error-msg" v-show="errors.has('signin.login_email')">{{ errors.first("signin.login_email") }}</span>
+								<input class="forms__entry" :class="{'input': true, 'forms__entry--error': errors.has('signin.login_password') }" type="password" name="login_password" id="login_password" placeholder="Your password.." v-model.lazy="login_password" v-validate="'required'">
+								<span class="forms__error-msg" v-show="errors.has('signin.login_password')">{{ errors.first("signin.login_password") }}</span>
 
-					<div class="forms__actions">
-						<button class="forms__submit" type="submit">Sign in</button>
-						<a href="#" class="forms__forgot">Forgot your password <i class="far fa-arrow-right"></i></a>
-					</div>
+								<div class="forms__actions">
+									<button class="forms__submit" type="submit">Sign in</button>
+									<a href="#" class="forms__forgot">Forgot your password <i class="far fa-arrow-right"></i></a>
+								</div>
 
                 </form>
             </div>
@@ -29,12 +29,12 @@
                 <p class="forms__title">Register</p>
                 <form @submit.prevent="validateForm('register')" novalidate data-vv-scope="register">
 
-					<input class="forms__entry" :class="{'input': true, 'forms__entry--error': errors.has('register.register_email') }" type="text" name="register_email" id="register_email" placeholder="Your email.." v-model.lazy="register_email" v-validate="'required|email'">
-					<span class="forms__error-msg" v-show="errors.has('register.register_email')">{{ errors.first("register.register_email") }}</span>
-					<input class="forms__entry" :class="{'input': true, 'forms__entry--error': errors.has('register.register_password') }" type="password" name="register_password" id="register_password" placeholder="Your password.." v-validate="'required'" ref="password">
-					<span class="forms__error-msg" v-show="errors.has('register.register_password')">{{ errors.first("register.register_password") }}</span>
-					<input class="forms__entry" :class="{'input': true, 'forms__entry--error': errors.has('register.register_confirm') }" type="password" name="register_confirm" id="register_confirm" placeholder="Confirm password.." v-validate="'required|confirmed:password'">
-					<span class="forms__error-msg" v-show="errors.has('register.register_confirm')">{{ errors.first("register.register_confirm") }}</span>
+								<input class="forms__entry" :class="{'input': true, 'forms__entry--error': errors.has('register.register_email') }" type="text" name="register_email" id="register_email" placeholder="Your email.." v-model.lazy="register_email" v-validate="'required|email'">
+								<span class="forms__error-msg" v-show="errors.has('register.register_email')">{{ errors.first("register.register_email") }}</span>
+								<input class="forms__entry" :class="{'input': true, 'forms__entry--error': errors.has('register.register_password') }" type="password" name="register_password" id="register_password" placeholder="Your password.." v-validate="'required'" ref="password">
+								<span class="forms__error-msg" v-show="errors.has('register.register_password')">{{ errors.first("register.register_password") }}</span>
+								<input class="forms__entry" :class="{'input': true, 'forms__entry--error': errors.has('register.register_confirm') }" type="password" name="register_confirm" id="register_confirm" placeholder="Confirm password.." v-validate="'required|confirmed:password'">
+								<span class="forms__error-msg" v-show="errors.has('register.register_confirm')">{{ errors.first("register.register_confirm") }}</span>
 
                     <div class="checkbox pretty p-default p-smooth">
                         <input class="checkbox__input" type="checkbox" name="register_newsletter" id="register_newsletter" value="Yes">
@@ -62,7 +62,7 @@
 	import PageTitle from '@/components/PageTitle.vue'
 
 	export default {
-		name: 'app',
+		name: 'login',
 		components: {
 			PageTitle
 		},
@@ -116,7 +116,7 @@
 		}
 
         &__title {
-            font-weight: 400;
+            font-weight: 500;
             text-transform: uppercase;
             color: #575153;
             font-size: 1.4em;
@@ -176,7 +176,7 @@
         &__forgot {
 			color: #00c8c8;
 			text-decoration: none;
-			font-weight: 400;
+			font-weight: 500;
 			transition: 0.1s;
 
 			&:hover {

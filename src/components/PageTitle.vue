@@ -50,7 +50,7 @@ export default {
 
         &__subheading {
             text-transform: uppercase;
-            font-weight: 400;
+            font-weight: 500;
             font-size: 1.8em;
             color: #fff;
             margin: 0;

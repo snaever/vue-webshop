@@ -282,7 +282,7 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
             flex-grow: 2;
 
             &--light {
-                font-weight: 300;
+                font-weight: 400;
             }
 
             a {
@@ -327,7 +327,7 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
                         top: 12px;
                         left: -5px;
                         font-family: "Font Awesome 5 Pro";
-                        font-weight: 300;
+                        font-weight: 400;
                         content: "\f107";
                     }
                 }
@@ -398,7 +398,7 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
         &__single {
             color: #727272;
             margin-top: 10px;
-            font-weight: 100;
+            font-weight: 300;
             font-size: 1.1em;
 
             a {
@@ -421,7 +421,7 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
 
             &--light {
                 display: block;
-                font-weight: 300;
+                font-weight: 400;
             }
         }
     }
