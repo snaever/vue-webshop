@@ -33,7 +33,7 @@
 
                     <nav class="nav-content__links">
                         <div class="nav-content__item nav-content__item--has-sub">
-                            <router-link class="nav-content__link" to="/">Mens</router-link>
+                            <a href="#" class="nav-content__link">Mens</a>
 
                             <div class="sub-menu">
                                 <div class="sub-menu__wrapper">
@@ -90,7 +90,7 @@
 
                         </div>
                         <div class="nav-content__item nav-content__item--has-sub">
-                            <router-link class="nav-content__link" to="/about">Womens</router-link>
+                            <a href="#" class="nav-content__link">Womens</a>
 
                             <div class="sub-menu">
                                 <div class="sub-menu__wrapper">
@@ -150,10 +150,10 @@
                             <router-link class="nav-content__link" to="/brand">The Brand</router-link>
                         </div>
                         <div class="nav-content__item nav-content__item--has-sub">
-                            <router-link class="nav-content__link" to="/about">Local Stores</router-link>
+                            <a href="#" class="nav-content__link">Local Stores</a>
                         </div>
                         <div class="nav-content__item nav-content__item--has-sub">
-                            <router-link class="nav-content__link" to="/about">Look Book</router-link>
+                            <a href="#" class="nav-content__link">Look Book</a>
                         </div>
                     </nav>
 
@@ -173,9 +173,9 @@ window.onscroll = function changeNav(){
 var scrollPosY = window.pageYOffset | document.body.scrollTop;
 var navBar = document.getElementById('nav-bar'); // selects the element by Id
 
-    if(scrollPosY > 200) {
+    if(scrollPosY > 100) {
           navBar.className = ('nav-bar scrolled');
-    } else if(scrollPosY <= 200) {
+    } else if(scrollPosY <= 100) {
          navBar.className =  ('nav-bar');
     }
 }
@@ -334,7 +334,10 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
 
                 &:hover {
                     .sub-menu {
-                        display: block;
+                        visibility: visible;
+                        opacity: 1;
+                        transition-delay: 0s;
+                        top: 50px;
                     }
 
                     .nav-content__link {
@@ -369,9 +372,11 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
     }
 
     .sub-menu {
-        display: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s linear 0.2s, opacity 0.2s linear, top 0.1s linear;
         position: absolute;
-        top: 50px;
+        top: 80px;
         left: -5px;
         min-width: 300px;
         background-color: #f8f8f8;
