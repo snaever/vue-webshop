@@ -233,7 +233,7 @@ export default {
         width: 50%;
         height: 710px;
         margin-right: 15px;
-        background-color: lightgray;
+        background-color: #f8f8f8;
 
         .hooper {
             height: 100%;
