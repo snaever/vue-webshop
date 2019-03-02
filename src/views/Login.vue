@@ -67,6 +67,16 @@
 			PageTitle
 		},
 
+		data() {
+			return {
+				login_email: '',
+				register_email: '',
+				login_password: '',
+				register_password: '',
+				register_confirm: ''
+			}
+		},
+
 		methods: {
 			validateForm(scope) {
 				this.$validator.validateAll(scope).then((result) => {
