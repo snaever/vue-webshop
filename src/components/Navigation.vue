@@ -31,7 +31,7 @@
                         <router-link class="logo" to="/">AVENUE <span class="nav-content__branding--light">FASHION</span></router-link>
                     </p>
 
-                    <nav class="nav-content__links">
+                    <nav class="nav-content__links desktop">
                         <div class="nav-content__item nav-content__item--has-sub">
                             <a href="#" class="nav-content__link">Mens</a>
 
@@ -212,6 +212,10 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
         &__currency {
             flex-grow: 2;
 
+            @media (min-width: $breakpoint-tablet) {
+                flex-grow: 0;
+            }
+
             a {
                 transition: 0.1s;
 
@@ -283,6 +287,10 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
             font-weight: $w-bold;
             flex-grow: 2;
 
+            @media (min-width: $breakpoint-tablet) {
+                flex-grow: 0;
+            }
+
             &--light {
                 font-weight: $w-regular;
             }
@@ -351,6 +359,10 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
 
         &__search {
             margin-left: 115px;
+
+            @media (min-width: $breakpoint-tablet) {
+                margin-left: 0;
+            }
 
             input {
                 width: 190px;
