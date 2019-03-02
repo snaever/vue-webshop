@@ -26,6 +26,11 @@
         background-color: $snow;
         height: $hero-height;
         margin: 0 0 60px 0;
+
+        @media (min-width: $breakpoint-tablet) {
+            height: 400px;
+            margin: 0;
+        }
     }
 
     .hero-title {
@@ -36,10 +41,18 @@
         position: relative;
         z-index: 2;
 
+        @media (min-width: $breakpoint-tablet) {
+            height: 400px;
+        }
+
         &__letter {
             color: $heading;
             font-size: 40em;
             font-weight: $w-bold;
+
+            @media (min-width: $breakpoint-tablet) {
+                font-size: 10em;
+            }
         }
     }
 
@@ -49,8 +62,16 @@
         left: 180px;
         z-index: 1;
 
+        @media (min-width: $breakpoint-tablet) {
+            left: 0;
+        }
+
         img {
             height: $hero-height;
+
+            @media (min-width: $breakpoint-tablet) {
+                height: 400px;
+            }
         }
     }
 
@@ -59,5 +80,10 @@
         top: 770px;
         right: 460px;
         @include cta-btn($accent-color, #fff);
+
+        @media (min-width: $breakpoint-tablet) {
+            top: 300px;
+            right: 0;
+        }
     }
 </style>
