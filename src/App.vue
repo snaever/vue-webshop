@@ -21,9 +21,10 @@
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Roboto');
+@import "@/assets/sass/_all.scss";
 
   body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $main-font;
     font-size: 13px;
   }
 

@@ -96,115 +96,101 @@
 
 <style lang="scss">
 @import '~pretty-checkbox/src/pretty-checkbox.scss';
+@import "@/assets/sass/_all.scss";
 
-    .forms {
-        margin-top: 55px;
-        display: flex;
-        justify-content: space-between;
+.forms {
+	margin-top: 55px;
+	display: flex;
+	justify-content: space-between;
 
-		&__content {
-			width: 50%;
+	&__content {
+		width: 50%;
 
-			&:first-child {
-				padding-right: 30px;
-				border-right: 1px solid #eeeeee;
-			}
-
-			&:last-child {
-				padding-left: 30px;
-			}
+		&:first-child {
+			padding-right: 30px;
+			border-right: 1px solid #eeeeee;
 		}
 
-        &__title {
-            font-weight: 500;
-            text-transform: uppercase;
-            color: #575153;
-            font-size: 1.4em;
-            margin: 0 0 20px 0;
-        }
-
-        &__entry {
-			width: 100%;
-			height: 40px;
-			margin-top: 30px;
-			padding-left: 10px;
-			border: 1px solid #e7e7e7;
-			box-sizing: border-box;
-
-			&::placeholder {
-				color: #989898;
-			}
-
-			&--error {
-				border-color: #bb5465;
-				background-color: #fcf6f7;
-			}
+		&:last-child {
+			padding-left: 30px;
 		}
-		
-		&__error-msg {
-			color: #bb5465;
-			line-height: 2em;
-			font-size: 0.9em;
-		}
+	}
 
-        &__actions {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			margin-top: 30px;
-        }
+	&__title {
+		font-weight: $w-medium;
+		text-transform: uppercase;
+		color: $heading;
+		font-size: 1.4em;
+		margin: 0 0 20px 0;
+	}
 
-        &__submit {
-            border: 2px solid #737373;
-            padding: 15px 30px;
-            color: #737373;
-            text-transform: uppercase;
-            text-decoration: none;
-            font-size: 1.2em;
-            letter-spacing: 2px;
-            z-index: 3;
-            transition: 0.2s;
-            cursor: pointer;
-
-            &:hover {
-                border-color: #00c8c8;
-                background-color: #00c8c8;
-                color: #fff;
-            }
-        }
-
-        &__forgot {
-			color: #00c8c8;
-			text-decoration: none;
-			font-weight: 500;
-			transition: 0.1s;
-
-			&:hover {
-			color: #737373;
-			}
-        }
-
-        &__accept {
-			width: 230px;
-			text-align: right;
-			line-height: 1.4em;
-			color: #8e8c8c;
-		}
-    }
-
-    .checkbox {
-		height: 18px;
+	&__entry {
+		width: 100%;
+		height: 40px;
 		margin-top: 30px;
+		padding-left: 10px;
+		border: 1px solid $input-border;
+		box-sizing: border-box;
 
-		&__label {
-			font-size: 1.4em;
+		&::placeholder {
+			color: #989898;
 		}
 
-		&__text {
-			margin: 0;
-			font-size: 13px;
-			line-height: 18px;
-			color: #8e8c8c;
+		&--error {
+			border-color: #bb5465;
+			background-color: #fcf6f7;
 		}
-    }
+	}
+		
+	&__error-msg {
+		color: #bb5465;
+		line-height: 2em;
+		font-size: 0.9em;
+	}
+
+	&__actions {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 30px;
+	}
+
+	&__submit {
+		@include cta-btn($accent-color, #fff);
+	}
+
+	&__forgot {
+		color: $accent-color;
+		text-decoration: none;
+		font-weight: $w-medium;
+		transition: 0.1s;
+
+		&:hover {
+			color: $grey;
+		}
+	}
+
+	&__accept {
+		width: 230px;
+		text-align: right;
+		line-height: 1.4em;
+		color: $body-font;
+	}
+}
+
+.checkbox {
+	height: 18px;
+	margin-top: 30px;
+
+	&__label {
+		font-size: 1.4em;
+	}
+
+	&__text {
+		margin: 0;
+		font-size: 0.65em;
+		line-height: 1.2em;
+		color: $body-font;
+	}
+}
 </style>

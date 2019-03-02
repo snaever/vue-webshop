@@ -72,6 +72,8 @@ export default {
 
 
 <style lang="scss">
+@import "@/assets/sass/_all.scss";
+
 .featured-categories {
   padding: 55px 0;
   margin: 0;
@@ -83,18 +85,18 @@ export default {
     font-size: 1em;
 
     a {
-      color: #727272;
+      color: $grey;
       text-decoration: none;
       text-transform: uppercase;
       transition: 0.1s;
 
       &:hover {
-        color: #00c8c8;
+        color: $accent-color;
       }
     }
 
     &--active a {
-      color: #00c8c8;
+      color: $accent-color;
     }
   }
 }
@@ -110,7 +112,7 @@ export default {
 
 .featured-item {
   height: 500px;
-  background-color: #f8f8f8;
+  background-color: $snow;
   transition: 0.2s;
   position: relative;
 
@@ -152,7 +154,7 @@ export default {
     position: absolute;
     display: flex;
     font-size: 1.5em;
-    font-weight: 300;
+    font-weight: $w-light;
     margin: 1em;
 
     &--regular {
@@ -162,7 +164,7 @@ export default {
 
     p {
       margin: 0;
-      text-shadow: 0px 0px 5px #f8f8f8;
+      text-shadow: 0px 0px 5px $snow;
     }
   }
 
@@ -190,7 +192,7 @@ export default {
     font-size: 1em;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: $w-regular;
 
       a {
         color: inherit;
@@ -199,12 +201,12 @@ export default {
   }
 
   &__description {
-    font-family: 'Roboto', sans-serif;
-    color: #8e8c8c;
+    font-family: $secondary-font;
+    color: $body-font;
     margin: 15px 0;
     font-size: 1em;
     text-align: center;
-    font-weight: 400;
+    font-weight: $w-regular;
   }
 }
 
@@ -215,7 +217,7 @@ export default {
   margin: auto;
 
   &__button {
-    background-color: #727272;
+    background-color: $grey;
     color: #fff;
     width: 30px;
     height: 30px;
@@ -225,7 +227,7 @@ export default {
     transition: 0.2s;
 
     &:hover {
-      background-color: #00c8c8;
+      background-color: $accent-color;
     }
   }
 }

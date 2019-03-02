@@ -31,6 +31,8 @@
 </template>
 
 <style lang="scss">
+@import "@/assets/sass/_all.scss";
+
     .lookbook {
         margin: 55px 0;
         display: grid;
@@ -42,7 +44,7 @@
             position: relative;
             width: 100%;
             height: 530px;
-            background-color: #f8f8f8;
+            background-color: $snow;
         }
 
         &__model {
@@ -62,15 +64,15 @@
             right: 30px;
             width: 100%;
             margin: 0;
-            font-weight: 700;
+            font-weight: $w-bold;
             font-size: 4em;
             text-transform: uppercase;
             text-align: right;
-            color: #575153;
+            color: $heading;
 
             &--light {
                 display: block;
-                font-weight: 300;
+                font-weight: $w-light;
             }
         }
 
@@ -81,28 +83,14 @@
             width: 300px;
             line-height: 1.7em;
             text-align: right;
-            color: #727272;
+            color: $grey;
         }
 
         &__cta {
+            @include cta-btn($accent-color, #fff);
             position: absolute;
             top: 370px;
             right: 30px;
-            border: 2px solid #737373;
-            padding: 15px 30px;
-            color: #737373;
-            text-transform: uppercase;
-            text-decoration: none;
-            font-size: 1.2em;
-            letter-spacing: 2px;
-            z-index: 3;
-            transition: 0.2s;
-
-            &:hover {
-                border-color: #00c8c8;
-                background-color: #00c8c8;
-                color: #fff;
-            }
         }
     }
 </style>

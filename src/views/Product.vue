@@ -131,8 +131,8 @@
                             </div>
 
                             <div class="product-buttons">
-                                <button class="product-buttons__cta product-buttons__cta--submit" type="submit"><i class="far fa-shopping-cart"></i> Add to Cart</button>
-                                <button type="button" class="product-buttons__cta product-buttons__cta--lookbook"><i class="far fa-heart"></i> Add to Lookbook</button>
+                                <button class="product-buttons__purchase" type="submit"><i class="far fa-shopping-cart"></i> Add to Cart</button>
+                                <button type="button" class="product-buttons__lookbook"><i class="far fa-heart"></i> Add to Lookbook</button>
                             </div>
 
                             <button type="button" class="product-content__compare-btn"><i class="far fa-compress-alt"></i> Add to Compare</button>
@@ -223,6 +223,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/assets/sass/_all.scss";
+
     .product-info {
         display: flex;
         justify-content: space-between;
@@ -233,7 +235,7 @@ export default {
         width: 50%;
         height: 710px;
         margin-right: 15px;
-        background-color: #f8f8f8;
+        background-color: $snow;
 
         .hooper {
             height: 100%;
@@ -251,7 +253,7 @@ export default {
 
                 &:hover {
                     &:not(.is-disabled) {
-                        background-color: #00c8c8;
+                        background-color: $accent-color;
 
                         path:last-child {
                             fill: white;
@@ -279,8 +281,8 @@ export default {
 
         &__title {
             margin: 0;
-            font-weight: 500;
-            color: #575153;
+            font-weight: $w-medium;
+            color: $heading;
             text-transform: uppercase;
             font-size: 1.4em;
         }
@@ -288,7 +290,7 @@ export default {
         &__price {
             display: flex;
             font-size: 2.2em;
-            font-weight: 300;
+            font-weight: $w-light;
             color: #9a9a9a;
 
             &--regular {
@@ -307,8 +309,8 @@ export default {
         display: flex;
         align-items: center;
         margin-top: 20px;
-        color: #727272;
-        font-weight: 500;
+        color: $grey;
+        font-weight: $w-medium;
 
         &__text {
             margin: 0 10px;
@@ -325,7 +327,7 @@ export default {
                 transition: 0.1s;
 
                 &:hover {
-                    color: #00c8c8;
+                    color: $accent-color;
                 }
             }
         }
@@ -352,31 +354,31 @@ export default {
 
     .product-content {
         &__meta {
-            color: #8c8c8c;
+            color: $body-font;
 
             &--heading {
-                color: #575153;
-                font-weight: 700;
+                color: $heading;
+                font-weight: $w-bold;
                 text-transform: uppercase;
             }
 
             a {
-                color: #00c8c8;
+                color: $accent-color;
                 text-decoration: none;
                 transition: 0.1s;
 
                 &:hover {
-                    color: #8c8c8c;
+                    color: $body-font;
                 }
             }
         }
 
         &__description {
-            font-family: 'Roboto', sans-serif;
+            font-family: $secondary-font;
             font-size: 1.1em;
             line-height: 1.5em;
             margin: 30px 0;
-            color: #8e8c8c;
+            color: $body-font;
 
             ul {
                 padding: 0 20px;
@@ -387,7 +389,7 @@ export default {
             border: 0;
             padding: 0;
             margin-top: 30px;
-            color: #737373;
+            color: $grey;
             text-transform: uppercase;
             text-decoration: none;
             font-size: 1.2em;
@@ -398,7 +400,7 @@ export default {
             transition: 0.1s;
 
             .far {
-                background-color: #727272;
+                background-color: $grey;
                 color: #ffffff;
                 border-radius: 100%;
                 width: 30px;
@@ -410,10 +412,10 @@ export default {
             }
 
             &:hover {
-                color: #00c8c8;
+                color: $accent-color;
 
                 .far {
-                    background-color: #00c8c8;
+                    background-color: $accent-color;
                 }
             }
         }
@@ -428,7 +430,7 @@ export default {
         &__select-box {
             position: relative;
             width: 170px;
-            border: 1px solid #e7e7e7;
+            border: 1px solid $input-border;
             overflow: hidden;
             background: #ffffff;
 
@@ -455,9 +457,9 @@ export default {
 
         &__label {
             display: block;
-            font-weight: 700;
+            font-weight: $w-bold;
             text-transform: uppercase;
-            color: #575153;
+            color: $heading;
             margin-bottom: 10px;
         }
     }
@@ -471,7 +473,7 @@ export default {
             text-align: center;
             padding: 5px 8px;
             box-sizing: border-box;
-            border: 1px solid #e7e7e7;
+            border: 1px solid $input-border;
             border-right: 0;
             cursor: default;
             color: #989898;
@@ -480,7 +482,7 @@ export default {
         &__buttons {
             button {
                 display: block;
-                border: 1px solid #e7e7e7;
+                border: 1px solid $input-border;
                 color: #989898;
                 height: 18.5px;
                 width: 35px;
@@ -499,42 +501,21 @@ export default {
         display: flex;
         justify-content: space-between;
 
-        &__cta {
-            border: 2px solid #737373;
-            padding: 15px 30px;
-            color: #737373;
-            text-transform: uppercase;
-            text-decoration: none;
-            font-size: 1.2em;
-            letter-spacing: 2px;
-            z-index: 3;
-            transition: 0.2s;
-            cursor: pointer;
+        &__purchase {
+            @include cta-btn($dark-grey, #fff);
+        }
 
-            &--submit {
-                &:hover {
-                    border-color: #333333;
-                    background-color: #333333;
-                    color: #fff;
-                }
-            }
-
-            &--lookbook {
-                &:hover {
-                    border-color: #00c8c8;
-                    background-color: #00c8c8;
-                    color: #fff;
-                }
-            }
+        &__lookbook {
+            @include cta-btn($accent-color, #fff);
         }
     }
 
     .product-details {
         &__title {
-            font-family: 'Montserrat', sans-serif;
+            font-family: $main-font;
             text-transform: uppercase;
-            color: #727272;
-            font-weight: 500;
+            color: $grey;
+            font-weight: $w-medium;
         }
         
         .tabs-component {
@@ -542,7 +523,7 @@ export default {
         }
 
         .tabs-component-tabs {
-            background-color: #f8f8f8;
+            background-color: $snow;
             margin: 0;
         }
 
@@ -558,11 +539,11 @@ export default {
 
         .tabs-component-tab {
             text-transform: uppercase;
-            color: #575153;
+            color: $heading;
             height: 50px;
             line-height: 50px;
-            font-size: 14px;
-            font-weight: 600;
+            font-size: 1.1em;
+            font-weight: $w-medium;
             margin-right: 0;
             list-style: none;
         }
@@ -570,11 +551,6 @@ export default {
         .tabs-component-tab.is-active {
             color: #fff;
             background-color: #333333;
-        }
-
-        .tabs-component-tab.is-disabled * {
-            color: #cdcdcd;
-            cursor: not-allowed !important;
         }
 
         @media (min-width: 700px) {
@@ -600,10 +576,10 @@ export default {
 
         .tabs-component-panels {
             padding: 10px 0;
-            font-family: 'Roboto', sans-serif;
+            font-family: $secondary-font;
             font-size: 1.1em;
             line-height: 1.5em;
-            color: #8e8c8c;
+            color: $body-font;
         }
     }
 </style>

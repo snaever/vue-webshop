@@ -183,6 +183,8 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
 
 
 <style lang="scss">
+@import "@/assets/sass/_all.scss";
+
     .top-spacing {
         padding-top: 115px;
     }
@@ -192,14 +194,14 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
         top: 0;
         height: 45px;
         width: 100%;
-        background-color: #333333;
+        background-color: $dark-grey;
         z-index: 100;
     }
 
     .bar-content {
         display: flex;
         justify-content: space-between;
-        color: #929292;
+        color: $bar-color;
         line-height: 45px;
 
         a {
@@ -214,7 +216,7 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
                 transition: 0.1s;
 
                 &:hover {
-                    color: lighten($color: #929292, $amount: 20);
+                    color: lighten($color: $bar-color, $amount: 20);
                 }
             }
 
@@ -231,20 +233,20 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
                 transition: 0.1s;
 
                 &:hover {
-                    color: lighten($color: #929292, $amount: 20);
+                    color: lighten($color: $bar-color, $amount: 20);
                 }
             }
         }
 
         &__cart {
-            background-color: #00c8c8;
+            background-color: $accent-color;
             color: #fff;
             padding: 0 23px;
             transition: 0.1s;
             cursor: pointer;
 
             &:hover {
-                background-color: darken($color: #00c8c8, $amount: 5);
+                background-color: darken($color: $accent-color, $amount: 5);
             }
 
             .fa-shopping-cart {
@@ -267,7 +269,7 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
         height: 30px;
 
         &.scrolled {
-            background-color: #f8f8f8;
+            background-color: $snow;
         }
     }
 
@@ -278,11 +280,11 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
         &__branding {
             margin: 0;
             font-size: 2em;
-            font-weight: 700;
+            font-weight: $w-bold;
             flex-grow: 2;
 
             &--light {
-                font-weight: 400;
+                font-weight: $w-regular;
             }
 
             a {
@@ -296,7 +298,7 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
         }
 
         &__link {
-            color: #222222;
+            color: $dark-grey;
             text-decoration: none;
             text-transform: uppercase;
             margin-right: 60px;
@@ -305,12 +307,12 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
             transition: 0.1s;
 
             &:hover {
-                color: #00c8c8;
+                color: $accent-color;
             }
         }
 
         .router-link-exact-active:not(.logo) {
-            color: #00c8c8;
+            color: $accent-color;
         }
 
         &__item {
@@ -327,7 +329,7 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
                         top: 12px;
                         left: -5px;
                         font-family: "Font Awesome 5 Pro";
-                        font-weight: 400;
+                        font-weight: $w-regular;
                         content: "\f107";
                     }
                 }
@@ -341,7 +343,7 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
                     }
 
                     .nav-content__link {
-                        color: #00c8c8;
+                        color: $accent-color;
                     }
                 }
             }
@@ -354,7 +356,7 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
                 width: 190px;
                 height: 30px;
                 padding: 0 27px 0px 10px;
-                border: 1px solid #e7e7e7;
+                border: 1px solid $input-border;
             }
 
             .fa-search {
@@ -365,7 +367,7 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
                 color: #a5a5a5;
 
                 &:hover {
-                    color: #00c8c8;
+                    color: $accent-color;
                 }
             }
         }
@@ -379,7 +381,7 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
         top: 80px;
         left: -5px;
         min-width: 300px;
-        background-color: #f8f8f8;
+        background-color: $snow;
         box-shadow: 0px 11px 24px rgba(0,0,0,0.4);
         z-index: 100;
 
@@ -391,7 +393,7 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
         &__title {
             margin: 0 0 30px 0;
             text-transform: uppercase;
-            color: #575153;
+            color: $heading;
         }
 
         &__links {
@@ -401,9 +403,9 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
         }
 
         &__single {
-            color: #727272;
+            color: $grey;
             margin-top: 10px;
-            font-weight: 300;
+            font-weight: $w-light;
             font-size: 1.1em;
 
             a {
@@ -418,15 +420,15 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
             text-align: center;
             text-transform: uppercase;
             font-size: 2em;
-            font-weight: 700;
-            background-color: #333333;
+            font-weight: $w-bold;
+            background-color: $dark-grey;
             color: #FFF;
             letter-spacing: 2px;
             line-height: 1.2em;
 
             &--light {
                 display: block;
-                font-weight: 400;
+                font-weight: $w-light;
             }
         }
     }

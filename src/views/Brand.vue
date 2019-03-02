@@ -74,6 +74,8 @@
 </script>
 
 <style lang="scss">
+@import "@/assets/sass/_all.scss";
+
   .our-story {
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -136,21 +138,21 @@
 
     &__title {
       text-transform: uppercase;
-      font-weight: 500;
+      font-weight: $w-medium;
       font-size: 1.4em;
       margin: 0;
-      color: #575153;
+      color: $heading;;
     }
 
     &__subtitle {
       text-transform: uppercase;
-      font-weight: 500;
-      color: #727272;
+      font-weight: $w-medium;
+      color: $grey;
       margin: 12px 0;
     }
 
     &__body {
-      color: #8e8c8c;
+      color: $body-font;
       line-height: 1.6em;
       margin: 0;
     }

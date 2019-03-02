@@ -18,12 +18,12 @@
 </template>
 
 <style lang="scss">
-$hero-height: 920px;
+@import "@/assets/sass/_all.scss";
 
     .hero {
         position: relative;
         top: -70px;
-        background-color: #f8f8f8;
+        background-color: $snow;
         height: $hero-height;
         margin: 0 0 60px 0;
     }
@@ -37,9 +37,9 @@ $hero-height: 920px;
         z-index: 2;
 
         &__letter {
-            color: #575153;
+            color: $heading;
             font-size: 40em;
-            font-weight: 700;
+            font-weight: $w-bold;
         }
     }
 
@@ -58,20 +58,6 @@ $hero-height: 920px;
         position: absolute;
         top: 770px;
         right: 460px;
-        border: 2px solid #737373;
-        padding: 15px 30px;
-        color: #737373;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-size: 1.2em;
-        letter-spacing: 2px;
-        z-index: 3;
-        transition: 0.2s;
-
-        &:hover {
-            border-color: #00c8c8;
-            background-color: #00c8c8;
-            color: #fff;
-        }
+        @include cta-btn($accent-color, #fff);
     }
 </style>

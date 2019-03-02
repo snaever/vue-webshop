@@ -92,8 +92,10 @@
 </template>
 
 <style lang="scss">
+@import "@/assets/sass/_all.scss";
+
     .site-footer {
-        background-color: #f8f8f8;
+        background-color: $snow;
         margin-top: 110px;
     }
 
@@ -110,7 +112,7 @@
         &__title {
             margin: 0 0 40px 0;
             text-transform: uppercase;
-            color: #575153;
+            color: $heading;
         }
 
         &__nav {
@@ -119,7 +121,7 @@
         }
 
         &__single {
-            color: #727272;
+            color: $grey;
             margin-top: 10px;
 
             a {
@@ -128,13 +130,13 @@
                 transition: 0.1s;
 
                 &:hover {
-                    color: darken($color: #727272, $amount: 20);
+                    color: darken($color: $grey, $amount: 20);
                 }
             }
         }
 
         &__contact {
-            color: #727272;
+            color: $grey;
             line-height: 1.5em;
         }
     }
@@ -153,24 +155,24 @@
             text-align: center;
 
             &--black {
-                background-color: #333333;
+                background-color: $dark-grey;
             }
 
             &--blue {
-                background-color: #00c8c8;
+                background-color: $accent-color;
             }
         }
 
         &__statement {
             text-transform: uppercase;
-            font-weight: 700;
+            font-weight: $w-bold;;
             font-size: 2.5em;
             line-height: 1.3em;
             margin: 0;
 
             &--light {
                 display: block;
-                font-weight: 300;
+                font-weight: $w-light;
             }
         }
 
@@ -194,7 +196,7 @@
     }
     
     .copyright-bar {
-        background-color: #333333;
+        background-color: $dark-grey;
         height: 45px;
     }
 
