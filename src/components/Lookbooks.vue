@@ -37,14 +37,25 @@
         margin: 55px 0;
         display: grid;
         grid-template-columns: repeat(3, auto);
-        grid-template-rows: 1;
+        grid-template-rows: auto;
         grid-column-gap: 30px;
+
+        @media (min-width: $breakpoint-tablet) {
+            grid-template-columns: auto;
+            grid-template-rows: repeat(3, auto);
+            grid-column-gap: 0;
+            grid-row-gap: 30px;
+        }
 
         &__wrapper {
             position: relative;
             width: 100%;
             height: 530px;
             background-color: $snow;
+
+            @media (min-width: $breakpoint-tablet) {
+                height: 460px;
+            }
         }
 
         &__model {
