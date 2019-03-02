@@ -37,4 +37,10 @@
     max-width: 1170px;
     margin: auto;
   }
+
+  @media (min-width: $breakpoint-tablet) {
+      .desktop {
+        display: none;
+      }
+  }
 </style>
