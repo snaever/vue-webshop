@@ -84,6 +84,12 @@ export default {
     margin-right: 60px;
     font-size: 1em;
 
+      @media (max-width: $breakpoint-mobile) {
+          display: block;
+          margin: 0 0 15px 0;
+          text-align: center;
+      }
+
     a {
       color: $grey;
       text-decoration: none;
@@ -108,6 +114,15 @@ export default {
   grid-gap: 30px;
   padding-bottom: 55px;
   border-bottom: 1px solid #eeeeee;
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: auto;
+  }
 }
 
 .featured-item {
@@ -116,16 +131,18 @@ export default {
   transition: 0.2s;
   position: relative;
 
-  &:nth-child(3) {
-    grid-column: 3 / span 2;
-    grid-row: 1 / span 2;
-    height: auto;
-  }
+  @media (min-width: ($breakpoint-tablet + 1)) {
+    &:nth-child(3) {
+      grid-column: 3 / span 2;
+      grid-row: 1 / span 2;
+      height: auto;
+    }
 
-  &:nth-child(4) {
-    grid-column: 1 / span 2;
-    grid-row: 2 / span 2;
-    height: auto;
+    &:nth-child(4) {
+      grid-column: 1 / span 2;
+      grid-row: 2 / span 2;
+      height: auto;
+    }
   }
 
   &:hover {

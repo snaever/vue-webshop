@@ -29,18 +29,18 @@
         </div>
 
         <div class="our-story__block">
+          <p class="our-story__title">Ethitcal trading</p>
+          <p class="our-story__subtitle">We oversee the working conditions of the people in the supply chain</p>
+          <p class="our-story__body">Nullam dapibus consectetur neque, faucibus porttitor purus iaculis sed. Aenean eras dapibus augue, eget dignissim dui maecenas et rhoncus mim, vel semper arcu lorem. Pellentesque congue justo esteir pellentesque aliquet massa eget posuere tincidunt. Cras viverra ullamcorper nunc accumsan hendrerit.</p>
+        </div>
+
+        <div class="our-story__block">
           <div class="our-story__block">
             <picture class="our-story__image">
                 <source srcset="@/assets/img/story-3.jpg">
                 <img src="@/assets/img/story-3.jpg" />
             </picture>
           </div>
-        </div>
-
-        <div class="our-story__block">
-          <p class="our-story__title">Ethitcal trading</p>
-          <p class="our-story__subtitle">We oversee the working conditions of the people in the supply chain</p>
-          <p class="our-story__body">Nullam dapibus consectetur neque, faucibus porttitor purus iaculis sed. Aenean eras dapibus augue, eget dignissim dui maecenas et rhoncus mim, vel semper arcu lorem. Pellentesque congue justo esteir pellentesque aliquet massa eget posuere tincidunt. Cras viverra ullamcorper nunc accumsan hendrerit.</p>
         </div>
 
         <div class="our-story__block">
@@ -83,9 +83,17 @@
     grid-gap: 5px 30px;
     margin-top: 55px;
 
+    @media (max-width: $breakpoint-mobile) {
+      display: block;
+    }
+
     &__block {
       width: 100%;
       height: 100%;
+
+      @media (max-width: $breakpoint-mobile) {
+        margin: 15px 0;
+      }
 
       &:nth-child(1) {
         grid-column: 1;
@@ -105,15 +113,15 @@
       }
 
       &:nth-child(4) {
-        grid-column: 1;
-        grid-row-start: 9;
-        grid-row-end: 16;
-      }
-
-      &:nth-child(5) {
         grid-column: 2;
         grid-row-start: 14;
         grid-row-end: 18;
+      }
+
+      &:nth-child(5) {
+        grid-column: 1;
+        grid-row-start: 9;
+        grid-row-end: 16;
       }
 
       &:nth-child(6) {
@@ -164,6 +172,10 @@
         .award-logo {
           width: auto;
           height: 130px;
+
+          @media (max-width: $breakpoint-mobile) {
+            height: 70px;
+          }
         }
     }
   }

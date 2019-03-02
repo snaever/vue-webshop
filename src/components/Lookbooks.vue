@@ -40,7 +40,7 @@
         grid-template-rows: auto;
         grid-column-gap: 30px;
 
-        @media (min-width: $breakpoint-tablet) {
+        @media (max-width: $breakpoint-tablet) {
             grid-template-columns: auto;
             grid-template-rows: repeat(3, auto);
             grid-column-gap: 0;
@@ -53,7 +53,7 @@
             height: 530px;
             background-color: $snow;
 
-            @media (min-width: $breakpoint-tablet) {
+            @media (max-width: $breakpoint-tablet) {
                 height: 460px;
             }
         }
@@ -102,6 +102,10 @@
             position: absolute;
             top: 370px;
             right: 30px;
+
+            @media (max-width: $breakpoint-mobile) {
+                background-color: $snow;
+            }
         }
     }
 </style>

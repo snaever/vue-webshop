@@ -229,6 +229,10 @@ export default {
         display: flex;
         justify-content: space-between;
         margin-top: 55px;
+
+        @media (max-width: $breakpoint-mobile) {
+            display: block;
+        }
     }
 
     .product-gallery {
@@ -236,6 +240,12 @@ export default {
         height: 710px;
         margin-right: 15px;
         background-color: $snow;
+
+        @media (max-width: $breakpoint-mobile) {
+            width: 100%;
+            height: auto;
+            margin: 0 0 20px 0;
+        }
 
         .hooper {
             height: 100%;
@@ -279,6 +289,11 @@ export default {
         width: 50%;
         margin-left: 15px;
 
+        @media (max-width: $breakpoint-mobile) {
+            width: 100%;
+            margin: 0;
+        }
+
         &__title {
             margin: 0;
             font-weight: $w-medium;
@@ -312,6 +327,10 @@ export default {
         color: $grey;
         font-weight: $w-medium;
 
+        @media (max-width: $breakpoint-mobile) {
+            flex-wrap: wrap;
+        }
+
         &__text {
             margin: 0 10px;
 
@@ -336,6 +355,10 @@ export default {
     .product-reviews {
         display: flex;
         margin-right: 10px;
+
+        @media (max-width: $breakpoint-mobile) {
+            margin: 20px 5px;
+        }
 
         &__back-stars {
             display: flex;
@@ -386,6 +409,7 @@ export default {
         }
 
         &__compare-btn {
+            background-color: transparent;
             border: 0;
             padding: 0;
             margin-top: 30px;
@@ -427,6 +451,10 @@ export default {
         width: 500px;
         margin-top: 50px;
 
+        @media (max-width: $breakpoint-mobile) {
+            display: block;
+        }
+
         &__select-box {
             position: relative;
             width: 170px;
@@ -461,6 +489,10 @@ export default {
             text-transform: uppercase;
             color: $heading;
             margin-bottom: 10px;
+
+            @media (max-width: $breakpoint-mobile) {
+                margin-top: 20px;
+			}
         }
     }
 
@@ -481,6 +513,7 @@ export default {
 
         &__buttons {
             button {
+                background-color: transparent;
                 display: block;
                 border: 1px solid $input-border;
                 color: #989898;
@@ -501,12 +534,25 @@ export default {
         display: flex;
         justify-content: space-between;
 
+        @media (max-width: $breakpoint-mobile) {
+            display: block;
+        }
+
         &__purchase {
             @include cta-btn($dark-grey, #fff);
+
+            @media (max-width: $breakpoint-mobile) {
+                display: block;
+                margin-bottom: 20px;
+			}
         }
 
         &__lookbook {
             @include cta-btn($accent-color, #fff);
+            
+            @media (max-width: $breakpoint-mobile) {
+				display: block;
+			}
         }
     }
 
@@ -523,13 +569,13 @@ export default {
         }
 
         .tabs-component-tabs {
+            padding: 0;
             background-color: $snow;
             margin: 0;
         }
 
-        @media (min-width: 700px) {
+        @media (min-width: $breakpoint-tablet) {
             .tabs-component-tabs {
-                padding: 0;
                 border: 0;
                 align-items: stretch;
                 display: flex;
@@ -553,7 +599,7 @@ export default {
             background-color: #333333;
         }
 
-        @media (min-width: 700px) {
+        @media (min-width: $breakpoint-tablet) {
             .tabs-component-tab {
                 margin-right: 30px;
                 transition: transform .3s ease;

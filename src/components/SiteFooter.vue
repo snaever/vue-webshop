@@ -105,14 +105,27 @@
         &__sitemap {
             display: flex;
             justify-content: space-between;
+
+            @media (max-width: $breakpoint-tablet) {
+                flex-wrap: wrap;
+            }
         }
     }
 
     .footer-links {
+        @media (max-width: $breakpoint-tablet) {
+            width: 50%;
+            margin-bottom: 20px;
+        }
+
         &__title {
             margin: 0 0 40px 0;
             text-transform: uppercase;
             color: $heading;
+        
+            @media (max-width: $breakpoint-tablet) {
+                margin-bottom: 20px;
+            }
         }
 
         &__nav {
@@ -146,6 +159,10 @@
         justify-content: space-between;
         margin-top: 55px;
 
+        @media (max-width: $breakpoint-tablet) {
+            display: block;
+        }
+
         &__box {
             width: calc(50% - 15px);
             height: 200px;
@@ -153,6 +170,15 @@
             box-sizing: border-box;
             color: #fff;
             text-align: center;
+
+            @media (max-width: $breakpoint-tablet) {
+                width: 100%;
+                margin-top: 30px;
+            }
+
+            @media (max-width: $breakpoint-mobile) {
+                height: 170px;
+            }
 
             &--black {
                 background-color: $dark-grey;
@@ -169,6 +195,10 @@
             font-size: 2.5em;
             line-height: 1.3em;
             margin: 0;
+
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 1.6em;
+            }
 
             &--light {
                 display: block;
@@ -198,6 +228,11 @@
     .copyright-bar {
         background-color: $dark-grey;
         height: 45px;
+
+        @media (max-width: $breakpoint-mobile) {
+            height: auto;
+            padding: 10px 0;
+        }
     }
 
     .copyright-content {
@@ -205,6 +240,10 @@
         justify-content: space-between;
         height: 100%;
         line-height: 45px;
+
+        @media (max-width: $breakpoint-mobile) {
+            line-height: 1.6em;
+        }
 
         &__trademark {
             position: relative;
@@ -216,6 +255,11 @@
                 position: absolute;
                 top: -3px;
                 font-size: 0.6em;
+
+                @media (max-width: $breakpoint-mobile) {
+                    top: initial;
+                    bottom: 3px;
+                }
             }
         }
 

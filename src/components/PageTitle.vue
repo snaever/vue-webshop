@@ -37,6 +37,10 @@ export default {
         background-position: center center;
         background-repeat: no-repeat;
 
+        @media (max-width: $breakpoint-mobile) {
+            height: 210px;
+        }
+
         &__heading {
             width: 100%;
             font-size: 3.2em;
@@ -44,6 +48,10 @@ export default {
             text-transform: uppercase;
             color: #fff;
             margin: 0 0 20px 0;
+
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 2em;
+            }
 
             &--light {
                 font-weight: $w-light;
@@ -56,6 +64,10 @@ export default {
             font-size: 1.8em;
             color: #fff;
             margin: 0;
+
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 1.4em;
+            }
         }
     }
 </style>

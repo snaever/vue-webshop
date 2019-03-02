@@ -113,16 +113,36 @@
 	display: flex;
 	justify-content: space-between;
 
+	@media (max-width: $breakpoint-mobile) {
+		display: block;
+	}
+
 	&__content {
 		width: 50%;
+
+		@media (max-width: $breakpoint-mobile) {
+			width: 100%;
+		}
 
 		&:first-child {
 			padding-right: 30px;
 			border-right: 1px solid #eeeeee;
+
+			@media (max-width: $breakpoint-mobile) {
+				padding: 0;
+				border: 0px;
+				padding-bottom: 30px;
+				border-bottom: 1px solid #eeeeee;
+			}
 		}
 
 		&:last-child {
 			padding-left: 30px;
+
+			@media (max-width: $breakpoint-mobile) {
+				padding: 0;
+				padding-top: 30px;
+			}
 		}
 	}
 
