@@ -25,18 +25,18 @@
                     <div class="product-meta">
                         <div class="product-reviews" title="70%">
                             <div class="product-reviews__back-stars">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <font-awesome-icon icon="star" />
+                                <font-awesome-icon icon="star" />
+                                <font-awesome-icon icon="star" />
+                                <font-awesome-icon icon="star" />
+                                <font-awesome-icon icon="star" />
                                 
                                 <div class="product-reviews__front-stars" style="width: 70%">
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <font-awesome-icon icon="star" />
+                                    <font-awesome-icon icon="star" />
+                                    <font-awesome-icon icon="star" />
+                                    <font-awesome-icon icon="star" />
+                                    <font-awesome-icon icon="star" />
                                 </div>
                             </div>
                         </div>
@@ -47,12 +47,12 @@
                         <p class="product-meta__text">|</p>
                         <p class="product-meta__text">Share:</p>
                         <p class="product-meta__text product-meta__text--sites">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="far fa-envelope"></i></a>
+                            <a href="#"><font-awesome-icon :icon="['fab', 'facebook-f']" /></a>
+                            <a href="#"><font-awesome-icon :icon="['fab', 'twitter']" /></a>
+                            <a href="#"><font-awesome-icon :icon="['fab', 'google-plus-g']" /></a>
+                            <a href="#"><font-awesome-icon :icon="['fab', 'pinterest-p']" /></a>
+                            <a href="#"><font-awesome-icon :icon="['fab', 'instagram']" /></a>
+                            <a href="#"><font-awesome-icon :icon="['far', 'envelope']" /></a>
                         </p>
 
                     </div>
@@ -103,7 +103,7 @@
                                             <option value="0" disabled selected>Select Colour</option>
                                             <option v-for="(colour, index) in product.colours" :key="index">{{ colour }}</option>
                                         </select>
-                                        <i class="fal fa-angle-down"></i>
+                                        <font-awesome-icon :icon="['fal', 'angle-down']" />
                                     </div>
                                 </div>
 
@@ -114,7 +114,7 @@
                                             <option value="0" disabled selected>Select Size</option>
                                             <option v-for="(size, index) in product.sizes" :key="index">{{ size }}</option>
                                         </select>
-                                        <i class="fal fa-angle-down"></i>
+                                        <font-awesome-icon :icon="['fal', 'angle-down']" />
                                     </div>
                                 </div>
 
@@ -123,19 +123,19 @@
                                     <div class="quantity-toggle">
                                         <input class="quantity-toggle__input" type="text" name="qty" id="qty" :value="quantity" readonly>
                                         <div class="quantity-toggle__buttons">
-                                            <button type="button" @click="increment()"><i class="fal fa-angle-up"></i></button>
-                                            <button type="button" @click="decrement()"><i class="fal fa-angle-down"></i></button>
+                                            <button type="button" @click="increment()"><font-awesome-icon :icon="['fal', 'angle-up']" /></button>
+                                            <button type="button" @click="decrement()"><font-awesome-icon :icon="['fal', 'angle-down']" /></button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="product-buttons">
-                                <button class="product-buttons__purchase" type="submit"><i class="far fa-shopping-cart"></i> Add to Cart</button>
-                                <button type="button" class="product-buttons__lookbook"><i class="far fa-heart"></i> Add to Lookbook</button>
+                                <button class="product-buttons__purchase" type="submit"><font-awesome-icon :icon="['far', 'shopping-cart']" /> Add to Cart</button>
+                                <button type="button" class="product-buttons__lookbook"><font-awesome-icon :icon="['far', 'heart']" /> Add to Lookbook</button>
                             </div>
 
-                            <button type="button" class="product-content__compare-btn"><i class="far fa-compress-alt"></i> Add to Compare</button>
+                            <button type="button" class="product-content__compare-btn"><font-awesome-icon :icon="['far', 'compress-alt']" /> Add to Compare</button>
 
                         </form>
 

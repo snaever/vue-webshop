@@ -35,9 +35,9 @@
               <p class="featured-details__description">{{ product.intro.body.substring(0,40) + "..." }}</p>
 
               <div class="details-cta">
-                <router-link :to="'product/' + index" class="details-cta__button"><i class="fas fa-shopping-cart"></i></router-link>
-                <router-link :to="'product/' + index" class="details-cta__button"><i class="fas fa-heart"></i></router-link>
-                <router-link :to="'product/' + index" class="details-cta__button"><i class="fas fa-compress-alt"></i></router-link>
+                <router-link :to="'product/' + index" class="details-cta__button"><font-awesome-icon icon="shopping-cart" /></router-link>
+                <router-link :to="'product/' + index" class="details-cta__button"><font-awesome-icon :icon="['fas', 'heart']" /></router-link>
+                <router-link :to="'product/' + index" class="details-cta__button"><font-awesome-icon icon="compress-alt" /></router-link>
               </div>
             </div>
 

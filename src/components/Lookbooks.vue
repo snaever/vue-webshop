@@ -24,7 +24,7 @@
                 <img src="@/assets/img/you.png" />
             </picture>
             <h2 class="lookbook__title">Your <span class="lookbook__title--light">lookbook</span></h2>
-            <p class="lookbook__body">See an item you like and click the <i class="fal fa-heart"></i> button to add it to your lookbook where you can create your own perfect look. It’s like your own boutique!</p>
+            <p class="lookbook__body">See an item you like and click the <font-awesome-icon :icon="['fal', 'heart']" /> button to add it to your lookbook where you can create your own perfect look. It’s like your own boutique!</p>
             <a href="#" class="lookbook__cta">View now</a>
         </div>
     </div>
