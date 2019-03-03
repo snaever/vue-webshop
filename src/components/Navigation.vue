@@ -7,7 +7,7 @@
                     <div class="bar-content__currency">
                         <a href="#">
                             Currency: GBP
-                            <i class="fal fa-angle-down"></i>
+                            <font-awesome-icon :icon="['fal', 'angle-down']" />
                         </a>
                     </div>
                     <nav class="bar-content__account">
@@ -16,9 +16,9 @@
                     </nav>
                     <div class="bar-content__cart">
                         <a href="#">
-                            <i class="fas fa-shopping-cart"></i>
+                            <font-awesome-icon :icon="['fas', 'shopping-cart']" />
                             empty
-                            <i class="fal fa-angle-down"></i>
+                            <font-awesome-icon :icon="['fal', 'angle-down']" />
                         </a>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                     </p>
 
                     <div class="nav-content__mobile-btn mobile" v-on:click="showing = !showing">
-                        <i class="far fa-bars"></i>
+                        <font-awesome-icon :icon="['far', 'bars']" />
                     </div>
 
                     <div class="mobile-nav" v-bind:class="{'active' : showing }">
@@ -40,11 +40,11 @@
 
                             <div class="mobile-nav__search">
                                 <input type="search" name="mobile_search" id="mobile_search" placeholder="Search..">
-                                <i class="fas fa-search"></i>
+                                <font-awesome-icon :icon="['fas', 'search']" />
                             </div>
 
                             <div class="mobile-nav__close" v-on:click="showing = !showing">
-                                <i class="far fa-times"></i>
+                                <font-awesome-icon :icon="['far', 'times']" />
                             </div>
                         </div>
 
@@ -277,7 +277,7 @@
 
                     <div class="nav-content__search">
                         <input type="search" name="search" id="search" placeholder="Search..">
-                        <i class="fas fa-search"></i>
+                        <font-awesome-icon :icon="['fas', 'search']" />
                     </div>
                 </div>
             </div>

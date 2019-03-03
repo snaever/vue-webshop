@@ -67,10 +67,10 @@
                     </div>
                     <div class="footer-blocks__box footer-blocks__box--blue">
                         <div class="footer-blocks__social-links">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                            <a href="#"><font-awesome-icon :icon="['fab', 'facebook-f']" /></a>
+                            <a href="#"><font-awesome-icon :icon="['fab', 'twitter']" /></a>
+                            <a href="#"><font-awesome-icon :icon="['fab', 'instagram']" /></a>
+                            <a href="#"><font-awesome-icon :icon="['fab', 'pinterest']" /></a>
                         </div>
                     </div>
                 </div>

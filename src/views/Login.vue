@@ -19,7 +19,7 @@
 
 								<div class="forms__actions">
 									<button class="forms__submit" type="submit">Sign in</button>
-									<a href="#" class="forms__forgot">Forgot your password <i class="far fa-arrow-right"></i></a>
+									<a href="#" class="forms__forgot">Forgot your password <font-awesome-icon :icon="['far', 'arrow-right']" /></a>
 								</div>
 
                 </form>
@@ -47,7 +47,7 @@
 
                   <div class="forms__actions">
                     <button class="forms__submit" type="submit">Create account</button>
-                    <p class="forms__accept">By clicking 'Create Account', you agree to our <a href="#" class="forms__forgot">Privacy Policy <i class="far fa-arrow-right"></i></a></p>
+                    <p class="forms__accept">By clicking 'Create Account', you agree to our <a href="#" class="forms__forgot">Privacy Policy <font-awesome-icon :icon="['far', 'arrow-right']" /></a></p>
                   </div>
 
                 </form>
