@@ -11,10 +11,10 @@ import { faShoppingCart, faHeart as fasHeart, faStar, faSearch } from '@fortawes
 import { faCompressAlt } from '@fortawesome/pro-solid-svg-icons'
 import { faHeart as falHeart, faAngleDown, faAngleUp } from '@fortawesome/pro-light-svg-icons'
 import { faEnvelope, faHeart as farHeart } from '@fortawesome/free-regular-svg-icons'
-import { faShoppingCart as farShoppingCart, faCompressAlt as farCompressAlt, faArrowRight, faBars, faTimes } from '@fortawesome/pro-regular-svg-icons'
+import { faShoppingCart as farShoppingCart, faCompressAlt as farCompressAlt, faArrowRight, faBars, faTimes, faAngleDown as farAngleDown } from '@fortawesome/pro-regular-svg-icons'
 import { faFacebookF, faTwitter, faGooglePlusG, faPinterestP, faPinterest, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faShoppingCart, fasHeart, faCompressAlt, falHeart, faStar, faFacebookF, faTwitter, faGooglePlusG, faPinterestP, faPinterest, faInstagram, faEnvelope, faAngleDown, faAngleUp, farShoppingCart, farHeart, farCompressAlt, faArrowRight, faBars, faTimes, faSearch)
+library.add(faShoppingCart, fasHeart, faCompressAlt, falHeart, faStar, faFacebookF, faTwitter, faGooglePlusG, faPinterestP, faPinterest, faInstagram, faEnvelope, faAngleDown, faAngleUp, farShoppingCart, farHeart, farCompressAlt, faArrowRight, faBars, faTimes, faSearch, farAngleDown)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
