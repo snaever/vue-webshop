@@ -460,7 +460,7 @@ export default {
             width: 170px;
             border: 1px solid $input-border;
             overflow: hidden;
-            background: #ffffff;
+            background: transparent;
 
             select {
                 padding: 5px 8px;
@@ -480,6 +480,7 @@ export default {
                 top: 11px;
                 right: 6px;
                 color: #989898;
+                z-index: -1;
             }
         }
 
