@@ -151,7 +151,10 @@
 
                     <nav class="nav-content__links desktop">
                         <div class="nav-content__item nav-content__item--has-sub">
-                            <a href="#" class="nav-content__link">Mens</a>
+                            <a href="#" class="nav-content__link">
+                                Mens
+                                <font-awesome-icon :icon="['fal', 'angle-down']" />
+                            </a>
 
                             <div class="sub-menu">
                                 <div class="sub-menu__wrapper">
@@ -208,7 +211,10 @@
 
                         </div>
                         <div class="nav-content__item nav-content__item--has-sub">
-                            <a href="#" class="nav-content__link">Womens</a>
+                            <a href="#" class="nav-content__link">
+                                Womens
+                                <font-awesome-icon :icon="['fal', 'angle-down']" />    
+                            </a>
 
                             <div class="sub-menu">
                                 <div class="sub-menu__wrapper">
@@ -268,10 +274,16 @@
                             <router-link class="nav-content__link" to="/brand">The Brand</router-link>
                         </div>
                         <div class="nav-content__item nav-content__item--has-sub">
-                            <a href="#" class="nav-content__link">Local Stores</a>
+                            <a href="#" class="nav-content__link">
+                                Local Stores
+                                <font-awesome-icon :icon="['fal', 'angle-down']" />
+                            </a>
                         </div>
                         <div class="nav-content__item nav-content__item--has-sub">
-                            <a href="#" class="nav-content__link">Look Book</a>
+                            <a href="#" class="nav-content__link">
+                                Look Book
+                                <font-awesome-icon :icon="['fal', 'angle-down']" />
+                            </a>
                         </div>
                     </nav>
 
@@ -491,13 +503,10 @@ var navBar = document.getElementById('nav-bar'); // selects the element by Id
                 .nav-content__link {
                     position: relative;
 
-                    &::after {
+                    .fa-angle-down {
                         position: absolute;
-                        top: 12px;
+                        top: 20px;
                         left: -5px;
-                        font-family: "Font Awesome 5 Pro";
-                        font-weight: $w-regular;
-                        content: "\f107";
                     }
                 }
 
