@@ -135,7 +135,7 @@
                                 <button type="button" class="product-buttons__lookbook"><font-awesome-icon :icon="['far', 'heart']" /> Add to Lookbook</button>
                             </div>
 
-                            <button type="button" class="product-content__compare-btn"><font-awesome-icon :icon="['far', 'compress-alt']" /> Add to Compare</button>
+                            <button type="button" class="product-content__compare-btn"><div class="icon"><font-awesome-icon :icon="['far', 'compress-alt']" /></div> Add to Compare</button>
 
                         </form>
 
@@ -423,14 +423,14 @@ export default {
             cursor: pointer;
             transition: 0.1s;
 
-            .far {
+            .icon {
+                display: inline-block;
                 background-color: $grey;
                 color: #ffffff;
                 border-radius: 100%;
                 width: 30px;
                 height: 30px;
                 line-height: 30px;
-                padding-left: 3px;
                 box-sizing: border-box;
                 transition: 0.1s;
             }
@@ -438,7 +438,7 @@ export default {
             &:hover {
                 color: $accent-color;
 
-                .far {
+                .icon {
                     background-color: $accent-color;
                 }
             }
