@@ -278,12 +278,120 @@
                                 Local Stores
                                 <font-awesome-icon :icon="['fal', 'angle-down']" />
                             </a>
+
+                            <div class="sub-menu">
+                                <div class="sub-menu__wrapper">
+
+                                    <div class="sub-menu__section">
+                                        <p class="sub-menu__title">Casuals</p>
+                                        <ul class="sub-menu__links">
+                                            <li class="sub-menu__single">
+                                                <a href="#">Jackets</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Hoodies &amp; Sweatshirts</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Polo Shirts</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Sportswear</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Trousers &amp; Chinos</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">T-Shirts</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="sub-menu__section">
+                                        <p class="sub-menu__title">Formal</p>
+                                        <ul class="sub-menu__links">
+                                            <li class="sub-menu__single">
+                                                <a href="#">Jackets</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Shirts</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Suits</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Trousers</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                                <p class="sub-menu__statement">
+                                    Autumn sale!<span class="sub-menu__statement--light">Up to 50% off</span>
+                                </p>
+
+                            </div>
+
                         </div>
                         <div class="nav-content__item nav-content__item--has-sub">
                             <a href="#" class="nav-content__link">
                                 Look Book
                                 <font-awesome-icon :icon="['fal', 'angle-down']" />
                             </a>
+
+                            <div class="sub-menu">
+                                <div class="sub-menu__wrapper">
+
+                                    <div class="sub-menu__section">
+                                        <p class="sub-menu__title">Casuals</p>
+                                        <ul class="sub-menu__links">
+                                            <li class="sub-menu__single">
+                                                <a href="#">Jackets</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Hoodies &amp; Sweatshirts</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Polo Shirts</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Sportswear</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Trousers &amp; Chinos</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">T-Shirts</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="sub-menu__section">
+                                        <p class="sub-menu__title">Formal</p>
+                                        <ul class="sub-menu__links">
+                                            <li class="sub-menu__single">
+                                                <a href="#">Jackets</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Shirts</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Suits</a>
+                                            </li>
+                                            <li class="sub-menu__single">
+                                                <a href="#">Trousers</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                                <p class="sub-menu__statement">
+                                    Autumn sale!<span class="sub-menu__statement--light">Up to 50% off</span>
+                                </p>
+
+                            </div>
+
                         </div>
                     </nav>
 
